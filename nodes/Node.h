@@ -5,6 +5,8 @@
 #include <iostream>
 #include <string>
 
+#include "../packet/Packet.h"
+
 using namespace std;
 
 #ifndef CC5303_NODE_H
@@ -13,9 +15,20 @@ using namespace std;
 
 class Node {
 
+    private:
+        string name;
+        string ip;
+
     public:
-        string receive_msg();
-        void send_msg(string msg);
+        Node()= default;
+        Node(string, string);
+        ~Node();
+        virtual Packet receive_msg();
+        virtual void send_msg(Packet packet);
+        const string &getIp() const;
+        void setIp(const string &ip);
+        const string &getName() const;
+        void setName(const string &name);
 };
 
 

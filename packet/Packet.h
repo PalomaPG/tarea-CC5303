@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -24,7 +25,7 @@ private:
 
 public:
     Packet();
-    Packet(string, unsigned int, string, string, bool , unsigned int);
+    Packet(string, string, string, bool , unsigned int);
     const string &getMsg() const;
     unsigned int getId() const;
     const string &getReceiver_ip() const;
@@ -37,6 +38,7 @@ public:
     void setSender_ip(const string &sender_ip);
     void setPartitioned(bool partitioned);
     void setPart_id(unsigned int part_id);
+    ~Packet();
 
 
 };

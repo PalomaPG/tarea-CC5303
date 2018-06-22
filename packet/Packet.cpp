@@ -6,16 +6,10 @@
 Packet::Packet() = default;
 
 
-Packet::Packet(string msg, unsigned int id, string receiver_id,
-                 string sender_id, bool partitoned, unsigned int part_id){
+Packet::Packet(string msg, string receiver_ip, string sender_ip, bool partitoned, unsigned int part_id):
+        msg(msg), receiver_ip(receiver_ip), sender_ip(sender_ip), partitioned(partitoned), part_id(part_id){
 
-    this->msg = msg;
-    this->id = id;
-    this->receiver_ip = receiver_id;
-    this->sender_ip = sender_id;
-    this->partitioned = partitoned;
-    this->part_id = part_id;
-
+    this->id = rand();
 
 }
 

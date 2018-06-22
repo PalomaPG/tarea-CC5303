@@ -5,17 +5,17 @@
 #include <iostream>
 #include <string>
 
+#include "Node.h"
+
 using namespace std;
 
 #ifndef CC5303_CLIENT_H
 #define CC5303_CLIENT_H
 
 
-class Client {
+class Client : public Node{
 
-    public:
-        void send_msg(string msg);
-        string get_msg();
+
 
 
 };
