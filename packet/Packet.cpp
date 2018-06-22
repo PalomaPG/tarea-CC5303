@@ -7,7 +7,7 @@ Packet::Packet() = default;
 
 
 Packet::Packet(string msg, string receiver_ip, string sender_ip, bool partitoned, unsigned int part_id):
-        msg(msg), receiver_ip(receiver_ip), sender_ip(sender_ip), partitioned(partitoned), part_id(part_id){
+       partitioned(partitoned), part_id(part_id){
 
     this->id = rand();
 
