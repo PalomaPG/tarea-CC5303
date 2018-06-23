@@ -26,15 +26,6 @@ public:
     Packet(string, string, string, bool , unsigned int);
     ~Packet();
 
-    void setMsg(const string &msg);
-
-    const string &getReceiver_ip() const;
-    const string &getSender_ip() const;
-
-
-    void setReceiver_ip(const string &receiver_ip);
-    void setSender_ip(const string &sender_ip);
-
     bool isPartitioned() const;
     unsigned int getPart_id() const;
     void setPartitioned(bool partitioned);

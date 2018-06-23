@@ -21,9 +21,18 @@ private:
 public:
     AbstractPacket() = default;
     AbstractPacket(unsigned int, string, string);
+
+    AbstractPacket(const string &msg, unsigned int id, const string &receiver_ip, const string &sender_ip);
+
+    virtual void setId(unsigned int id);
+    virtual void setMsg(const string &msg);
+
     const string &getMsg() const;
     unsigned int getId() const;
-    void setId(unsigned int id);
+    const string &getReceiver_ip() const;
+    const string &getSender_ip() const;
+    void setReceiver_ip(const string &receiver_ip);
+    void setSender_ip(const string &sender_ip);
 
 
 };
