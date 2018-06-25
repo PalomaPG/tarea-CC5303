@@ -25,6 +25,8 @@ private:
 public:
     Packet(string, string, string, bool , unsigned int);
     ~Packet();
+    void setId(unsigned int id);
+    void setMsg(const string &msg);
 
     bool isPartitioned() const;
     unsigned int getPart_id() const;

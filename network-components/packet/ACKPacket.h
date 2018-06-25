@@ -9,7 +9,9 @@
 
 
 class ACKPacket : public AbstractPacket {
-
+public:
+    void setId(unsigned int id);
+    void setMsg(const string &msg);
 };
 
 

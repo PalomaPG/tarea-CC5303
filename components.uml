@@ -1,0 +1,46 @@
+@startuml
+
+AbstractPacket <|-- Packet
+AbstractPacket <|-- ACKPacket
+
+abstract class AbstractPacket{
+- string msg
+- unsigned int id
+- string receiver_ip
+- string sender_ip
+
++ AbstractPacket() = default
++ AbstractPacket(unsigned int, string, string)
++ AbstractPacket(const string &msg, unsigned int id,
+const string &receiver_ip, const string &sender_ip)
++ void setId(unsigned int id)
++ void setMsg(const string &msg)
++ string getMsg()
++ unsigned int getId()
++ string &getReceiver_ip()
++ string &getSender_ip()
++ void setReceiver_ip(const string &receiver_ip)
++ void setSender_ip(const string &sender_ip)
+}
+
+class Packet{
+- bool partitioned
+- unsigned int part_id
+
++ Packet(string, string, string, bool , unsigned int)
++ ~Packet()
++ bool isPartitioned() const
++ unsigned int getPart_id() const
++ void setPartitioned(bool partitioned)
++ oid setPart_id(unsigned int part_id)
+
++ void setId(unsigned int id)
++ void setMsg(const string &msg)
+}
+
+class ACKPacket{
++ void setId(unsigned int id)
++ void setMsg(const string &msg)
+}
+
+@enduml
