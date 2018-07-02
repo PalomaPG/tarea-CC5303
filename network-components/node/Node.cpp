@@ -22,3 +22,9 @@ const string &Node::getName() const {
 void Node::setName(const string &name) {
     Node::name = name;
 }
+
+Node::~Node() {
+
+}
+
+Node::Node() {}

@@ -5,7 +5,8 @@
 #include <iostream>
 #include <string>
 
-#include "../../packet/Packet.h"
+#include "../packet/Packet.h"
+#include "../link/Link.h"
 
 using namespace std;
 
@@ -20,7 +21,7 @@ class Node {
         string ip;
 
     public:
-        Node()= default;
+        Node();
         Node(string, string);
         ~Node();
         virtual Packet receive_msg();

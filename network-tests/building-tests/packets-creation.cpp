@@ -16,4 +16,9 @@
 
 class BuildingPackets : public ::testing::Test{
 
+protected:
+    void SetUp(){
+        Client *c1 = new  Client(SENDER_IP, "c1");
+
+    }
 };

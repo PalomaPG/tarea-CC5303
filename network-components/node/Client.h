@@ -6,6 +6,7 @@
 #include <string>
 
 #include "Node.h"
+#include "../link/Client2Router.h"
 
 using namespace std;
 
@@ -14,8 +15,14 @@ using namespace std;
 
 
 class Client : public Node{
-
-
+private:
+    Client2Router link;
+public:
+    const Client2Router &getLink() const;
+    void setLink(const Client2Router &link);
+    Client(string, string);
+    Packet receive_msg();
+    void send_msg(Packet packet);
 
 
 };
